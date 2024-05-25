@@ -57,7 +57,12 @@ const reducer = (state = initialState, action) => {
     }
 }
 
-// another action-creator
+/**
+ * fetchUsers() is also an action creator
+ * but it is different
+ * while the above action creators- fetchUsersRequest, fetchUsersSuccess, fetchUsersFailure returns an action
+ * fetchUsers() returns a function using Thunk middleware
+ */
 const fetchUsers = () => {
     return function(dispatch) {
         dispatch(fetchUsersRequest())
